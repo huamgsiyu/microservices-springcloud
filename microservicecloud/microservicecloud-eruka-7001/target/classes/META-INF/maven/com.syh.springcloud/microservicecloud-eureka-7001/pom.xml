@@ -9,18 +9,13 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>microservicecloud-consumer-dept-80</artifactId>
-	<description>部门微服务消费者</description>
+	<artifactId>microservicecloud-eureka-7001</artifactId>
 
 	<dependencies>
-		<dependency><!-- 自己定义的api -->
-			<groupId>com.syh.springcloud</groupId>
-			<artifactId>microservicecloud-api</artifactId>
-			<version>${project.version}</version>
-		</dependency>
+		<!--eureka-server服务端 -->
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-eureka-server</artifactId>
 		</dependency>
 		<!-- 修改后立即生效，热部署 -->
 		<dependency>
@@ -32,7 +27,6 @@
 			<artifactId>spring-boot-devtools</artifactId>
 		</dependency>
 	</dependencies>
-
 
 </project>
 
