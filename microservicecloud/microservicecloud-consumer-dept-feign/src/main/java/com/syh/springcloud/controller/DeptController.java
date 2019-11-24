@@ -25,7 +25,6 @@ public class DeptController {
 		return service.get(id);
 	}
 	
-	@SuppressWarnings("unchecked")
 	@RequestMapping(value = "/consumer/dept/list")
 	public List<Dept> list () {
 		return service.list();
