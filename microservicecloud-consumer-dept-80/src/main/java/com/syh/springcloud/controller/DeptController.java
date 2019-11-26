@@ -15,8 +15,7 @@ public class DeptController {
 	@Autowired
 	private RestTemplate restTemplate;
 	
-//	private final static String REST_URL_PREFIX = "http://localhost:8001";
-	private final static String REST_URL_PREFIX = "http://microservicecloud-dept";
+	private final static String REST_URL_PREFIX = "http://localhost:8001";
 	
 	@RequestMapping(value = "/consumer/dept/add")
 	public boolean add (Dept dept) {
@@ -32,10 +31,5 @@ public class DeptController {
 	@RequestMapping(value = "/consumer/dept/list")
 	public List<Dept> list () {
 		return restTemplate.getForObject(REST_URL_PREFIX + "/dept/list", List.class);
-	}
-	
-	@RequestMapping(value = "/consumer/dept/discovery")
-	public Object discovery () {
-		return restTemplate.getForObject(REST_URL_PREFIX + "/dept/discovery", Object.class);
 	}
 }
